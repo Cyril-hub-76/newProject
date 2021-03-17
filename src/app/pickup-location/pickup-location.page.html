@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-title>get location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item (click)="locatePosition()">
+      <ion-button>
+          <ion-icon slot="start" name="map"></ion-icon>
+          get Position
+      </ion-button>
+  </ion-item>
+  <div id="mapId" style="height: 200px;"></div>
+  <ion-icon slot="start" name="locate"></ion-icon>
+  <ion-label position="stacked">Adresse</ion-label>
+  <ion-textarea type="text" style="margin-top:10px" [(ngModel)]="adress"></ion-textarea>
+
+  <!-- <ion-button shape="round" expand="block" (click)="confimPickUpLocation()">Confirmer votre adresse</ion-button> -->
+</ion-content>
